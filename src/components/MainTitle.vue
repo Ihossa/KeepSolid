@@ -43,7 +43,8 @@
       }
     },
     methods: {
-      addNewTable(newTable){
+      addNewTable(newTable, editInf){
+        if(editInf.id){this.remove(editInf);}
         this.tableList.push(newTable);
         this.saveToLocalStorage();
       },
@@ -66,6 +67,7 @@
         const index = this.tableList.findIndex(e=> id === e.id);
         this.tableList.splice(index, 1);
         this.saveToLocalStorage();
+        
       },
       saveToLocalStorage(){
         localStorage.tableList = JSON.stringify(this.tableList);

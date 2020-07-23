@@ -27,12 +27,11 @@
     methods: {
       newTable(){
         const infTable = {
-          id: this.editInf.id? this.editInf.id:Date.now(),
+          id: Date.now(),
           title: this.title,
           content: this.content
         }
-        this.$emit('repl', infTable);
-        this.$emit('add', infTable);
+        this.$emit('add', infTable, this.editInf);
         this.title = "";
         this.content = "";
       },
