@@ -2,8 +2,8 @@ import App from './App.vue'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from './store'
-import Autorize from './components/Autorize.vue'
-import MainTitle from './components/MainTitle.vue'
+import Autorize from './pages/Autorize.vue'
+import MainTitle from './pages/MainTitle.vue'
 
 
 Vue.config.productionTip = false

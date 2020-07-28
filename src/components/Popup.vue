@@ -10,6 +10,7 @@
         <button @click = "close">X</button>
       </form>
     </div>
+    <div class="popup-other" @click = "close"></div>
   </div>
 </template>
 <script>
@@ -44,21 +45,26 @@
 </script>
 <style>
   .parent-popup{
-    background: #000;
     height: 100%;
-    opacity: 0.8;
-    position: fixed;
     width: 100%;
-    z-index: 100;
-    top: 0;
-    left: 0;
+  }
+  .popup-other{
+    display: inline-block;
+    position: absolute;
+    height: inherit;
+    background: #000;
+    opacity: 0.8;
+    width: 100%;
+    z-index: 1;
   }
   .popup{
+    display: inline-block;
     opacity: 1;
     position: fixed;
-    height: 100%;
+    height: auto;
     padding: 3rem;
     background: gray;
+    z-index: 2;
   }
   .popup form{
 
